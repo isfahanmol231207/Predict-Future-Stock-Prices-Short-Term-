@@ -1,28 +1,62 @@
-# Tesla Stock Price Prediction (Short-Term)
+#  Stock Price Prediction - Short-Term (Next Day Closing Price)
 
-This project predicts the **next day's closing price** of Tesla Inc. (TSLA) using historical stock market data. It leverages features like Open, High, Low, and Volume and applies machine learning models to forecast future prices.
-
----
+This project demonstrates how to use historical stock market data to **predict the next day's closing price** using machine learning models like **Random Forest Regressor**. The project is part of a time series regression task and uses real stock data fetched from **Yahoo Finance** via the `yfinance` API.
 
 ##  Objective
 
-- Fetch historical stock data for **Tesla (TSLA)** using the `yfinance` Python library.
-- Use features such as **Open**, **High**, **Low**, and **Volume** to predict the **next day's Close price**.
-- Train a **Linear Regression** or **Random Forest Regressor**.
-- Plot actual vs predicted values to evaluate the model.
-
----
-
-##  Tools & Libraries
-
-- `yfinance` – Fetch real-time and historical stock data
-- `pandas` – Data manipulation
-- `scikit-learn` – Machine learning models and evaluation
-- `matplotlib` & `seaborn` – Visualization
+Use past stock data (Open, High, Low, and Volume) to predict the **next day's closing price** for a selected stock (e.g., Tesla).
 
 ---
 
 ##  Dataset
 
-Stock data for **Tesla (TSLA)** is fetched directly using the [Yahoo Finance API](https://www.yahoofinance.com) via the `yfinance` library:
+- Source: [Yahoo Finance](https://finance.yahoo.com/)
+- Retrieved using the `yfinance` Python library
+- Stock Symbol Used: `TSLA` (Tesla Inc.)
+
+### Features Used:
+- `Open`
+- `High`
+- `Low`
+- `Volume`
+
+### Target Variable:
+- `Close` (next day's closing price)
+
+---
+
+##  Technologies and Skills
+
+-  **Time Series Data Handling**
+-  **Regression Modeling** (Random Forest Regressor)
+-  **Data Fetching using APIs** (`yfinance`)
+-  **Visualization of Predictions**
+
+---
+
+##  Methodology
+
+1. **Fetch Historical Data** using `yfinance`
+2. **Preprocess the Data**:
+   - Shift the 'Close' column to serve as the next day's target
+   - Drop missing values after shifting
+3. **Split Data** into training and testing sets
+4. **Train the Model**:
+   - RandomForestRegressor from `sklearn`
+5. **Evaluate and Predict**:
+   - Predict the closing prices on test data
+6. **Visualize**:
+   - Plot actual vs. predicted closing prices
+
+---
+
+##  Results
+
+A line plot shows actual vs predicted closing prices on the test data for `TSLA`. The model follows the trend well, with some deviations in high volatility zones. 
+
+![Model Performance](56e21fa1-1cd3-460e-844c-d29fc182ccea.png)
+
+---
+
+
 
