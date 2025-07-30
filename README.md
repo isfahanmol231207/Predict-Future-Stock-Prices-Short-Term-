@@ -54,7 +54,9 @@ Use past stock data (Open, High, Low, and Volume) to predict the **next day's cl
 
 A line plot shows actual vs predicted closing prices on the test data for `TSLA`. The model follows the trend well, with some deviations in high volatility zones. 
 
-![Model Performance](56e21fa1-1cd3-460e-844c-d29fc182ccea.png)
+![Model Performance](actual_vs_predicted_tsla.png)
+
+
 
 ---
 
